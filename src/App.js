@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles.css';
+import MessageCreator from "./components/MessageCreator";
+import Messages from "./components/Messages";
+import { useState, useEffect } from "react";
+
+
 
 function App() {
+
+  const [ messagesData, setMessagesData ] = useState(null);
+
+  const URL = "http://localhost:3000/messages";
+
+  async function getMessages() {
+    const response = await fetch(URL);
+    const data = await response.json();
+    setMessagesData(data);
+  }
+
+  function createMessage() {
+    console.log('Message being created');
+  }
+
+  useEffect(() => {
+    getMessages();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MessageCreator createMessage={createMessage}/>
+      <Messages messagesData={messagesData} />
     </div>
   );
 }

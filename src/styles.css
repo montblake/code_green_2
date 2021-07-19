@@ -1,0 +1,59 @@
+/* body {
+    background: green;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.App {
+    background: rgb(222, 235, 221);
+    width: 400px;
+    padding: 20px;
+} */
+
+.message-creator {
+    min-height: 300px;
+    background: yellowgreen;
+    margin: 0 auto 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+textarea {
+    background: rgb(222, 235, 221);
+    border: 1px solid green;
+    width: 100%;
+    min-height: 100px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background: rgb(222, 235, 221);
+    outline: none;
+    border: 1px solid green;
+    padding: 5px;
+
+}
+
+/* .messages {
+    min-height: 800px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: rgb(184, 225, 101);
+}
+
+.messages p {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.message {
+    border: 1px solid whitesmoke;
+} */
