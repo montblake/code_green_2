@@ -12,17 +12,16 @@ function Login() {
         setFormData({...formData, [event.target.name]: event.target.value})
     }
 
-    // function handleSubmit(event){
-    //     event.preventDefault;
-    //     console.log(formData);
-    // }
+    function handleSubmit(event){
+        
+    }
 
     return (
         <div>
             <h1>Login</h1>
-            <form >
-                <input type="text" name="name" value={formData.name} onChange={handleChange} />
-                <input type="password" name="password" value={formData.password} onChange={handleChange} />
+            <form onSubmit={handleSubmit}>
+                <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Name"/>
+                <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="password"/>
                 <input type="submit" value="Log In" />
             </form>
         </div>

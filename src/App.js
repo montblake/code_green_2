@@ -17,9 +17,18 @@ function App() {
     setMessagesData(data);
   }
 
-  function createMessage() {
-    console.log('Message being created');
-  }
+  async function createMessage(message) {
+    const response = await fetch(URL, {
+      method: "POST",
+      headers: {
+          "Content-Type": "Application/json",
+      },
+      body: JSON.stringify(message),
+    });
+    getMessages();
+  };
+  
+  
 
   useEffect(() => {
     getMessages();
