@@ -1,7 +1,6 @@
 import Message from "./Message";
 
 function Messages(props) {
-    console.log(props);
     
     const messagesArray = () => {
         return props.messagesData.map((single_message) => (
@@ -15,12 +14,10 @@ function Messages(props) {
     }
 
     return (
-
         <div className="messages">
             <h2>Code Green Messages</h2>
             {props.messagesData ? messagesArray() : "loading" }
         </div>
-        
     );
 }
 
