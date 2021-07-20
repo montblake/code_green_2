@@ -35,9 +35,17 @@ function App() {
     setMessagesData(data);
   }
 
-  function createMessage() {
-    console.log('Message being created');
-  }
+  async function createMessage(message) {
+    const response = await fetch(URL + 'messages', {
+      method: "POST",
+      headers: {
+          "Content-Type": "Application/json",
+          "Authorization": "Bearer " + userData["token"],
+      },
+      body: JSON.stringify(message),
+    });
+    getMessages();
+  };
 
   const ifUser = () => {
     return (
