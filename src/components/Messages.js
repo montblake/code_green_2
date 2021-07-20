@@ -1,6 +1,7 @@
 import Message from "./Message";
 
 function Messages(props) {
+    console.log(props);
     
     const messagesArray = () => {
         return props.messagesData.map((single_message) => (
