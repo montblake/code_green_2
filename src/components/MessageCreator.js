@@ -9,7 +9,7 @@ function MessageCreator(props) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        props.createMessage(messageForm.content);
+        props.createMessage(messageForm);
         setMessageForm({content: ""});
     }
 
