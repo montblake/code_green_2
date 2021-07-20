@@ -1,8 +1,8 @@
 import './styles.css';
-import MessageCreator from "./components/MessageCreator";
-import Messages from "./components/Messages";
 import { useState, useEffect } from "react";
-
+import {Switch, Route} from 'react-router-dom';
+import Auth from './pages/Auth';
+import MessageBoard from './pages/MessageBoard';
 
 
 function App() {
@@ -27,8 +27,14 @@ function App() {
 
   return (
     <div className="App">
-      <MessageCreator createMessage={createMessage}/>
-      <Messages messagesData={messagesData} />
+      <Switch>
+        <Route exact path="/">
+          <Auth />
+        </Route>
+        <Route path="/messagesboard">
+          <MessageBoard createMessage={createMessage} messagesData={messagesData} />
+        </Route>
+      </Switch>
     </div>
   );
 }
