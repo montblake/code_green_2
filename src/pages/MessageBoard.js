@@ -9,8 +9,11 @@ const MessageBoard = (props) => {
       <>  
         <Header /> 
         <Nav />
-        <MessageCreator createMessage={props.createMessage}/>
+        <div className="messagescontainer">
         <Messages messagesData={props.messagesData} />
+        </div>
+        <MessageCreator createMessage={props.createMessage}/>
+        
       </>
     )
 }
