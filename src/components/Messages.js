@@ -5,10 +5,12 @@ function Messages(props) {
     const messagesArray = () => {
         return props.messagesData.map((single_message) => (
             <Message 
-                key={single_message.id} 
+                key={single_message.id}
+                messageid={single_message.id}  
                 content={single_message.content}
                 user={single_message.user.name}
                 created_at={single_message.created_at}
+                deleteMessage={props.deleteMessage}
             />
         ));
     }
