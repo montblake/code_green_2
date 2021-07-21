@@ -1,5 +1,5 @@
 import './styles.css';
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Auth from './pages/Auth';
 import MessageBoard from './pages/MessageBoard';
 
@@ -11,6 +11,20 @@ function App() {
 
   const URL = "http://localhost:3000/";
 
+  async function getMessages(token) {
+    console.log("trying to get messages");
+    const response = await fetch(URL + 'messages', {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json",
+        "Authorization": 'Bearer ' + token,
+      }
+    });
+    const data = await response.json();
+    console.log("messages: ", data);
+    setMessagesData(data);
+  }
+
   const handleLogin = async (formData) => {
     const response = await fetch(URL + 'login',{
       method: 'POST',
@@ -20,23 +34,16 @@ function App() {
       body: JSON.stringify(formData)
     });
     const data = await response.json();
-    setUserData({token: data["token"]}); 
-  }
-
-  async function getMessages() {
-    const response = await fetch(URL + 'messages', {
-      method: "GET",
-      headers: {
-        "Content-type": "application/json",
-        "Authorization": 'Bearer ' + userData,
-      }
-    });
-    const data = await response.json();
-    setMessagesData(data);
+    console.log(data);
+    console.log(data.user.name);
+    getMessages(data.token);
+    setUserData({name: data.user.name, token: data.token});
+  
   }
 
   async function createMessage(message) {
-    const response = await fetch(URL + 'messages', {
+    console.log(userData.token);
+    await fetch(URL + 'messages', {
       method: "POST",
       headers: {
           "Content-Type": "Application/json",
@@ -44,7 +51,7 @@ function App() {
       },
       body: JSON.stringify(message),
     });
-    getMessages();
+    getMessages(userData.token);
   };
 
   const ifUser = () => {
@@ -63,9 +70,11 @@ function App() {
     )
   }
 
-  useEffect(() => {
-    getMessages();
-  }, []);
+  // useEffect(() => {
+  //   if (!!userData) {
+  //     getMessages();
+  //   }
+  // }, []);
 
   return (
     <>
