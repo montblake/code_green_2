@@ -1,15 +1,15 @@
 import { useState } from "react";
 
 function MessageCreator(props) {
-    const [messageForm, setMessageForm] = useState({ content: "" });
+    const [messageForm, setMessageForm] = useState({ content: "", topic: "general", user_id: 4 });
 
     const handleChange = (event) => {
-        setMessageForm({ content: event.target.value });
+        setMessageForm({ ...messageForm, content: event.target.value });
     };
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        props.createMessage(messageForm.content);
+        props.createMessage(messageForm);
         setMessageForm({content: ""});
     }
 
