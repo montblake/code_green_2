@@ -1,25 +1,42 @@
-/* body {
-    background: green;
-    width: 100vw;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #cae8e5;
+    width: 100wh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .App {
-    background: rgb(222, 235, 221);
-    width: 400px;
+    background: #f9f9f9;
+    width: 600px;
     padding: 20px;
-} */
+    border-left: solid 15px #8cea7a;
+    max-height: 98vh;
+}
+
+.messagescontainer {
+    max-height: 50vh;
+    overflow: scroll;
+}
 
 .message-creator {
-    min-height: 300px;
+    max-height: 30vh;
     background: yellowgreen;
     margin: 0 auto 20px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 20px;
+    padding:20px;
+}
+
+.message-creator > submit {
+    background-color:red;
 }
 
 textarea {
@@ -35,25 +52,62 @@ input[type=submit] {
     outline: none;
     border: 1px solid green;
     padding: 5px;
-
 }
 
-/* .messages {
-    min-height: 800px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    background: rgb(184, 225, 101);
+img.headerlogo {
+    width: 300px;
 }
 
-.messages p {
-    width: 90%;
-    margin: 10px auto;
+nav > a {
+    display:inline;
 }
 
-.message {
-    border: 1px solid whitesmoke;
-} */
+.message{
+    border:solid 2px #ACF6CD;
+    border-radius:20px;
+    line-height:0.5em;
+    background:white;
+    width:490px;
+    padding:10px;
+    padding-left:20px;
+    color:#005357;
+    margin-bottom:15px;
+    font-size:0.9em;
+}
+
+.message > h3 {
+    color:#062B2D;
+    line-height:1.2em;
+    font-weight:400;
+}
+
+.messagetime{
+    font-weight:400;
+    padding-left:10px;
+    opacity:0.5;
+}
+
+.lighter{
+    opacity:0.6;
+}
+
+
+/* FIRST BREAKPOINT */
+
+@media all and (max-width: 480px) {}
+
+/* SECOND BREAKPOINT */
+
+@media all and (max-width: 736px) {}
+
+/* THIRD BREAKPOINT */
+
+@media all and (max-width: 980px) {}
+
+/* FOURTH BREAKPOINT */
+
+@media all and (max-width: 1280px) {}
+
+/* FIFTH BREAKPOINT */
+
+@media all and (max-width: 1690px) {}

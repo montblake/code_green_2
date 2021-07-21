@@ -1,7 +1,7 @@
 function Header() {
     return (
         <header>
-            <h1>Code_Green</h1>
+            <img src="img/CodeGreenLogoSVG.svg" className="headerlogo" />
         </header>
     )
    }
