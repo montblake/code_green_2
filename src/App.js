@@ -9,7 +9,8 @@ function App() {
   const [ messagesData, setMessagesData ] = useState(null);
   const [ userData, setUserData ] = useState(null);
 
-  const URL = "http://localhost:3000/";
+  // const URL = "http://localhost:3000/";
+  const URL = "https://testing1293.herokuapp.com/";
 
   async function getMessages(token) {
     console.log("trying to get messages");
