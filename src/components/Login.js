@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 
-function Login() {
+function Login(props) {
 
     const [ formData, setFormData ] = useState({
         name: "",
@@ -13,7 +13,9 @@ function Login() {
     }
 
     function handleSubmit(event){
-        
+        event.preventDefault();
+        props.handleLogin(formData);
+        setFormData({...formData, name:"", password: ""})
     }
 
     return (

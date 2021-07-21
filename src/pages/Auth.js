@@ -3,11 +3,8 @@ import Login from '../components/Login';
 
 const Auth = (props) => {
 
-    return (
-        <>
-            <Login handleSubmit={props.handleSubmit}/>
-        </>
-    )
+    return <Login handleLogin={props.handleLogin}/>;
+
 }
 
 export default Auth;
