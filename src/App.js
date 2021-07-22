@@ -35,8 +35,7 @@ function App() {
       body: JSON.stringify(formData)
     });
     const data = await response.json();
-    console.log(data);
-    console.log(data.user.name);
+    setInterval(() => getMessages(data.token), 2000);
     getMessages(data.token);
     setUserData({name: data.user.name, token: data.token});
   
