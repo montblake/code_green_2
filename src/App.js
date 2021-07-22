@@ -9,7 +9,7 @@ function App() {
   const [ messagesData, setMessagesData ] = useState(null);
   const [ userData, setUserData ] = useState(null);
 
-  // const URL = "http://localhost:3000/";
+  //const URL = "http://localhost:3000/";
   const URL = "https://testing1293.herokuapp.com/";
 
   async function getMessages(token) {
@@ -55,10 +55,23 @@ function App() {
     getMessages(userData.token);
   };
 
+  async function deleteMessage(messageid){
+
+    await fetch(URL + 'messages/' + messageid, {
+      method: "DELETE",
+      headers: {
+          "Content-Type": "Application/json",
+          "Authorization": "Bearer " + userData.token
+      },
+    });
+    getMessages(userData.token);
+  }
+
+
   const ifUser = () => {
     return (
       <div className="App">
-        <MessageBoard createMessage={createMessage} messagesData={messagesData} />
+        <MessageBoard deleteMessage={deleteMessage} createMessage={createMessage} messagesData={messagesData} />
       </div>
     )
   }

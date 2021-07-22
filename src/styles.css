@@ -1,26 +1,70 @@
 * {
     box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
 }
 
 body {
-    background: #cae8e5;
+    /* background: #cae8e5; */
+    background: url(https://i.imgur.com/2mE2ADq.png);
     width: 100wh;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Manrope', sans-serif;
+    padding-top: 0px;
+    margin-top: 20px;
 }
 
 .App {
     background: #f9f9f9;
     width: 600px;
     padding: 20px;
-    border-left: solid 15px #8cea7a;
+    border-left: solid 15px #4CCD5D;
     max-height: 98vh;
+    padding-bottom: 30px;
+    border-radius: 7px;
+    box-shadow: -1px 36px 70px 7px rgba(0, 0, 0, 0.27);
+    -webkit-box-shadow: -1px 36px 70px 7px rgba(0, 0, 0, 0.27);
+    -moz-box-shadow: -1px 36px 70px 7px rgba(0, 0, 0, 0.27);
 }
 
 .messagescontainer {
     max-height: 50vh;
     overflow: scroll;
+}
+
+.logincontainer {
+    text-align: center;
+}
+
+.loginform {
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.loginformlabel {
+    font-weight: 300;
+    color: #BABABA;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+
+.loginform>input {
+    display: block;
+    margin: 0 auto;
+    border-top: dotted 1px #12AB4A;
+    border-left: dotted 1px #12AB4A;
+    border-right: dotted 1px #12AB4A;
+    border-bottom: solid 5px #12AB4A;
+    background-color: white;
+    height: 50px;
+    width: 230px;
+    border-radius: 7px;
+    margin-bottom: 13px;
+    padding-left: 10px;
+    font-size: 1.1em;
 }
 
 .message-creator {
@@ -32,11 +76,11 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    padding:20px;
+    padding: 20px;
 }
 
-.message-creator > submit {
-    background-color:red;
+.message-creator>submit {
+    background-color: red;
 }
 
 textarea {
@@ -47,48 +91,57 @@ textarea {
     resize: vertical;
 }
 
-input[type=submit] {
-    background: rgb(222, 235, 221);
-    outline: none;
-    border: 1px solid green;
-    padding: 5px;
-}
-
 img.headerlogo {
     width: 300px;
 }
 
-nav > a {
-    display:inline;
+nav>a {
+    display: inline;
 }
 
-.message{
-    border:solid 2px #ACF6CD;
-    border-radius:20px;
-    line-height:0.5em;
-    background:white;
-    width:490px;
-    padding:10px;
-    padding-left:20px;
-    color:#005357;
-    margin-bottom:15px;
-    font-size:0.9em;
+.message {
+    border: solid 2px #ACF6CD;
+    border-radius: 20px;
+    line-height: 0.5em;
+    background: white;
+    width: 490px;
+    padding: 10px;
+    padding-left: 20px;
+    color: #005357;
+    margin-bottom: 15px;
+    font-size: 0.9em;
 }
 
-.message > h3 {
-    color:#062B2D;
-    line-height:1.2em;
-    font-weight:400;
+.message>h3 {
+    color: #062B2D;
+    line-height: 1.2em;
+    font-weight: 400;
 }
 
-.messagetime{
-    font-weight:400;
-    padding-left:10px;
-    opacity:0.5;
+.messagetime {
+    font-weight: 400;
+    padding-left: 10px;
+    opacity: 0.5;
 }
 
-.lighter{
-    opacity:0.6;
+.lighter {
+    opacity: 0.6;
+}
+
+.signinbutton {
+    background-color: #3BB04A !important;
+    outline: none;
+    border: 1px solid green;
+    padding: 5px;
+    color: white;
+    transition: 0.18s;
+    font-size: 1.3em !important;
+    margin-top: 40px !important;
+    font-weight: 600;
+}
+
+.signinbutton:hover {
+    opacity: 0.8;
 }
 
 

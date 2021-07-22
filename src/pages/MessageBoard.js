@@ -10,7 +10,7 @@ const MessageBoard = (props) => {
         <Header /> 
         <Nav />
         <div className="messagescontainer">
-        <Messages messagesData={props.messagesData} />
+        <Messages messagesData={props.messagesData} deleteMessage={props.deleteMessage}/>
         </div>
         <MessageCreator createMessage={props.createMessage}/>
         
