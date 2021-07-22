@@ -28,17 +28,32 @@ function Message(props) {
         <MessageCreator toggleForm={toggleForm} content={messageForm.content} messageid={props.messageid} updateMessage={props.updateMessage}/>
         :
         <div className="message">
-             <h4>{props.user}
+
+
+
+             <h4 className="blakeh4">
+                 
+                 
+                 {props.user}
                 <span className="messagetime">{moment(props.created_at).format('LT')}
                 &middot; {moment(props.created_at).format('LL')}</span>
+
+
                 { props.user === props.userData.name ?  
+                
+                
                 <div>
+                   
+                   
                     <button onClick={handleDelete} className="crudbutton deleteButton">
                     <i className="fa fa-trash-o fa-2x" aria-hidden="true"> </i>
                     </button>
                     <button onClick={toggleForm} className="crudbutton editButton">
                         <i className="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
                     </button>
+
+
+                    
                 </div>   
                 :
                 <div></div>
