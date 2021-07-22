@@ -25,6 +25,11 @@ function App() {
     setMessagesData(data);
   }
 
+  function logOut(){
+    setUserData(null);
+    setMessagesData(null);
+  }
+
   const handleLogin = async (formData) => {
     const response = await fetch(URL + 'login', {
       method: 'POST',
@@ -69,7 +74,7 @@ function App() {
   const ifUser = () => {
     return (
       <div className="App">
-        <MessageBoard deleteMessage={deleteMessage} createMessage={createMessage} messagesData={messagesData} />
+        <MessageBoard deleteMessage={deleteMessage} createMessage={createMessage} messagesData={messagesData} userData={userData} logOut={logOut} />
       </div>
     )
   }
