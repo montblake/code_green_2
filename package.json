@@ -2,7 +2,8 @@
   "name": "code_green_frontend",
   "version": "0.1.0",
   "engines": {
-    "node": "16.4.2"
+    "node": "16.4.2",
+    "npm": "7.18.1"
   },
   "private": true,
   "dependencies": {
