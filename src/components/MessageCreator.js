@@ -10,22 +10,23 @@ function MessageCreator(props) {
     const handleSubmit = (event) => {
         event.preventDefault();
         props.createMessage(messageForm);
-        setMessageForm({content: ""});
+        setMessageForm({ content: "" });
     }
 
     return (
         <div className="message-creator">
-           <form className="message-form" onSubmit={handleSubmit}>
+            <form className="message-form" onSubmit={handleSubmit}>
                 <textarea
+                    autoFocus
                     name="content"
                     onChange={handleChange}
                     value={messageForm.content}
                     className="messagetextarea"
                 ></textarea>
                 <input className="postmessagebutton" type="submit" name="message-form-submit-btn" value="Post Message"></input>
-           </form>
+            </form>
         </div>
-        
+
     );
 };
 
