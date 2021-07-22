@@ -23,7 +23,7 @@ function Login(props) {
              <img src="img/CodeGreenLogoSVG.svg" className="headerlogo" alt="Code_Green Logo" />
             <h1 className="loginformlabel">sign in</h1>
             <form onSubmit={handleSubmit} className="loginform">
-                <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Name"/>
+                <input autoFocus type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Name"/>
                 <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="password"/>
                 <input type="submit" value="sign in" className="signinbutton" />
             </form>

@@ -7,12 +7,18 @@ import Messages from '../components/Messages';
 const MessageBoard = (props) => {
     return (
       <>  
+
+
+      <div className="headerrow">
         <Header /> 
         <Nav logOut={props.logOut} userData={props.userData} />
-        <div className="messagescontainer">
-        <Messages messagesData={props.messagesData} deleteMessage={props.deleteMessage} userData={props.userData} />
         </div>
-        <MessageCreator createMessage={props.createMessage}/>
+
+
+        <div className="messagescontainer">
+        <Messages messagesData={props.messagesData} deleteMessage={props.deleteMessage} userData={props.userData} updateMessage={props.updateMessage}/>
+        </div>
+        <MessageCreator createMessage={props.createMessage} updateMessage={props.updateMessage}/>
         
       </>
     )

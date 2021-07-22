@@ -70,11 +70,30 @@ function App() {
     getMessages(userData.token);
   }
 
+  async function updateMessage(message, messageid) {
+    console.log('message:', message);
+    console.log('message_id:', messageid);
+    await fetch(URL + 'messages/' + messageid, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "Application/json",
+        "Authorization": "Bearer " + userData.token
+      },
+      body: JSON.stringify({content: message})
+    });
+    getMessages(userData.token);
+  }
 
   const ifUser = () => {
     return (
       <div className="App">
-        <MessageBoard deleteMessage={deleteMessage} createMessage={createMessage} messagesData={messagesData} userData={userData} logOut={logOut} />
+       <MessageBoard 
+        deleteMessage={deleteMessage} 
+        createMessage={createMessage} 
+        messagesData={messagesData} 
+        userData={userData} 
+        logOut={logOut} 
+        updateMessage={updateMessage} />
       </div>
     )
   }

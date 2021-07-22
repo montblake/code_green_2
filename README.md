@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+![Code Green](https://i.imgur.com/0eRSOft.jpg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Code_Green
 
-## Available Scripts
+Code_Green is an internal messaging app created for a fictitious garden-tech company. This is a collaborative project mainly for learning purposes - to practice integrating a Ruby on Rails back-end API with a React front-end.
 
-In the project directory, you can run:
 
-### `yarn start`
+## Technologies Used
+* Ruby, Ruby on Rails
+* React
+* HTML
+* CSS
+* PostgreSQL
+* JWT 
+* Heroku
+* Affinity designer
+* Flaticon
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Screenshots
+![Screenshot](https://i.imgur.com/6WWbcOP.png)
 
-### `yarn test`
+![Screenshot](https://i.imgur.com/mhgWjba.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Wireframes and Organization
 
-### `yarn build`
+Our project was organized on this [Trello board](https://trello.com/b/oMP3lmGH/project-4-garden-tech).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Wireframe Images
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Wireframe Image](https://i.imgur.com/V2XfHtP.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ERD - Entity Relationship Diagram
 
-### `yarn eject`
+![ERD v1](https://i.imgur.com/UVh3Obc.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Getting Started
+[Click here](https://code-green-app.herokuapp.com/) to see a live, working version of the app!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Group Members
+* Guled Ahmed - Project Manager [GitHub](https://github.com/gguleid) - [LinkedIn](https://www.linkedin.com/in/guled-ahmed-38a69055/)
+* Chelsea Lumsden - Lead Frontend Developer [GitHub](https://github.com/clums19) - [LinkedIn](https://www.linkedin.com/in/chelsea-lumsden-112623210/)
+* Blake Montgomery - Lead Backend Developer [GitHub](https://github.com/montblake) - [LinkedIn](https://www.linkedin.com/in/blake-montgomery312/)
+* Obilo Nwokogba - Release Manager [GitHub](https://github.com/obi-nwokogba) - [LinkedIn](https://www.linkedin.com/in/obi-nwokogba/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## User Stories
+* As a user I would like to create an account.
+* As a user I would like to send a message to other users in the group.
+* As a user I would like to edit my messages.
+* As a user I would like to delete my messages.
+* As a user I would like a sidebar to navigate to different topics.
+* As a user I would like to search for messages.
+* As a user I would like to leave a comment under someone else's messages.
+* As a user I would like to send images.
+* As a user I would like to send emojis.
