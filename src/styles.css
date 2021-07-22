@@ -69,19 +69,55 @@ body {
 
 .message-creator {
     max-height: 30vh;
-    background: #B0F3C8;
+    background: #d2d2d2;
+    background: url(https://i.imgur.com/2mE2ADq.png);
     margin: 0 auto 20px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 0px;
     padding: 20px;
 }
 
 .postmessagebutton{
-    background-color:yellowgreen;
-    padding:20px;
+    display: block;
+    margin: 0 auto;
+    border-top: dotted 1px #12AB4A;
+    border-left: dotted 1px #12AB4A;
+    border-right: dotted 1px #12AB4A;
+    border-bottom: solid 5px #12AB4A;
+    background-color: white;
+    height: 50px;
+    width: 230px;
+    border-radius: 7px;
+    margin-bottom: 13px;
+    padding-left: 10px;
+    font-size: 1.1em;
+    background-color: #3BB04A !important;
+    outline: none;
+    border: 1px solid green;
+    padding: 5px;
+    color: white;
+    transition: 0.18s;
+    font-size: 1.1em !important;
+    margin-top: 10px !important;
+    font-weight: 600;
+    margin:0 auto;
+    transition:0.13s;
+}
+
+.postmessagebutton:hover{
+    width: 260px;
+    opacity:0.89
+}
+
+.messagetextarea{
+    background:white;
+    border-radius:13px;
+    padding:15px;
+    font-size:1.2em;
+    width:400px;
 }
 
 .message-creator>submit {
@@ -105,28 +141,41 @@ nav>a {
 }
 
 .message {
-    border: solid 2px #ACF6CD;
+    border: solid 1px #b3c1b8b5;
     border-radius: 20px;
-    line-height: 0.5em;
+    line-height: 0.3em;
     background: white;
     width: 490px;
-    padding: 10px;
+    padding: 7px;
     padding-left: 20px;
-    color: #005357;
+    color: #002a2c;
     margin-bottom: 15px;
     font-size: 0.9em;
-    display: flex;
+
+    border-left:solid 3px #b3c1b8b5;
 }
 
-.messageLeftSide {
-    flex-grow: 1;
-    min-width: 300px;
+.message > h4{
+    color:#474747;
+    padding-top:0px;
+    margin-top:5px;
+    opacity:0.7;
 }
 
-.messageRightSide {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+.message > h4:hover{
+    color:#2d2d2d;
+    opacity:1;
+}
+
+
+.messagetext{
+    margin-top: -10px !important;
+    font-size:1.3em;
+    line-height:30px;
+    padding-top:0px;
+    color:black;
+    display:block;
+    border-top:dotted 1px #D1D1D1;
 }
 
 .crudbutton {

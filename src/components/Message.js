@@ -9,7 +9,7 @@ function Message(props) {
     return (
         <div className="message">
 
-            <div className="messageLeftside">
+           
                 <h4>{props.user}
                     <span className="messagetime">{moment(props.created_at).format('LT')}
                         &middot; {moment(props.created_at).format('LL')}</span>
@@ -22,9 +22,8 @@ function Message(props) {
                     </button>
 
                 </h4>
-                <h3>{props.content}</h3>
-            </div>
-
+                <span className="messagetext">{props.content}</span>
+        
         </div>
     )
 }
