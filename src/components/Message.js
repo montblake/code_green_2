@@ -6,25 +6,50 @@ function Message(props) {
         props.deleteMessage(props.messageid);
     }
 
+    function userMessage(){
+        return (
+            <div className="message">
+    
+               
+                    <h4>{props.user}
+                        <span className="messagetime">{moment(props.created_at).format('LT')}
+                            &middot; {moment(props.created_at).format('LL')}</span>
+    
+                        <button onClick={handleDelete} className="crudbutton deleteButton">
+                            <i className="fa fa-trash-o fa-2x" aria-hidden="true"> </i>
+                        </button>
+                        <button className="crudbutton editButton">
+                            <i className="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
+                        </button>
+    
+                    </h4>
+                    <span className="messagetext">{props.content}</span>
+            
+            </div>
+        )
+    }
+
+    function nonUserMessage(){
+        return (
+            <div className="message">
+    
+               
+                    <h4>{props.user}
+                        <span className="messagetime">{moment(props.created_at).format('LT')}
+                            &middot; {moment(props.created_at).format('LL')}</span>
+    
+    
+                    </h4>
+                    <span className="messagetext">{props.content}</span>
+            
+            </div>
+        )
+    }
+
     return (
-        <div className="message">
-
-           
-                <h4>{props.user}
-                    <span className="messagetime">{moment(props.created_at).format('LT')}
-                        &middot; {moment(props.created_at).format('LL')}</span>
-
-                    <button onClick={handleDelete} className="crudbutton deleteButton">
-                        <i className="fa fa-trash-o fa-2x" aria-hidden="true"> </i>
-                    </button>
-                    <button className="crudbutton editButton">
-                        <i className="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
-                    </button>
-
-                </h4>
-                <span className="messagetext">{props.content}</span>
-        
-        </div>
+        <>
+            { props.user === props.userData.name ? userMessage() : nonUserMessage() }
+        </>
     )
 }
 

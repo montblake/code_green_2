@@ -19,6 +19,7 @@ function Messages(props) {
                 user={single_message.user.name}
                 created_at={single_message.created_at}
                 deleteMessage={props.deleteMessage}
+                userData={props.userData}
             />
         ));
     }
