@@ -1,18 +1,13 @@
-import { Link } from 'react-router-dom';
+function Nav(props) {
 
+function handleClick(){
+    props.logOut();
+}
 
-function Nav() {
  return (
      <nav>
-         <Link to="/link1">
-             <div>Topic 1</div>
-         </Link>
-         <Link to="/link1">
-             <div>Topic 2</div>
-         </Link>
-         <Link to="/link1">
-             <div>Topic 3</div>
-         </Link>
+        <div onClick={handleClick}>Log Out</div>
+        <p>Hello, {props.userData.name}</p>
      </nav>
  )
 }
