@@ -18,6 +18,7 @@ function MessageCreator(props) {
             props.createMessage(messageForm);
             setMessageForm({content: ""});
         }
+
     }
 
     useEffect(() => {
@@ -31,8 +32,9 @@ function MessageCreator(props) {
 
     return (
         <div className="message-creator">
-           <form className="message-form" onSubmit={handleSubmit}>
+            <form className="message-form" onSubmit={handleSubmit}>
                 <textarea
+                    autoFocus
                     name="content"
                     onChange={handleChange}
                     value={messageForm.content}
@@ -40,8 +42,9 @@ function MessageCreator(props) {
                 ></textarea>
                 <input className="postmessagebutton" type="submit" name="message-form-submit-btn" value={props.content ? "Update Message" : "Post Message"}></input>
            </form>
+
         </div>
-        
+
     );
 };
 
