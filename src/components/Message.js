@@ -2,20 +2,28 @@ import moment from 'moment';
 
 function Message(props) {
 
-    function handleDelete(){
+    function handleDelete() {
         props.deleteMessage(props.messageid);
-        //alert(props.messageid);
-        //alert(props.messageid);
     }
 
     return (
         <div className="message">
-            <h4>{props.user} 
-            <span className="messagetime">{moment(props.created_at).format('LT')} 
-            &middot; {moment(props.created_at).format('LL')}</span>
-            </h4>
-            <h3>{props.content}</h3>
-            <button onClick={handleDelete}>DEL {props.messageid}</button>
+
+           
+                <h4>{props.user}
+                    <span className="messagetime">{moment(props.created_at).format('LT')}
+                        &middot; {moment(props.created_at).format('LL')}</span>
+
+                    <button onClick={handleDelete} className="crudbutton deleteButton">
+                        <i className="fa fa-trash-o fa-2x" aria-hidden="true"> </i>
+                    </button>
+                    <button className="crudbutton editButton">
+                        <i className="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
+                    </button>
+
+                </h4>
+                <span className="messagetext">{props.content}</span>
+        
         </div>
     )
 }

@@ -6,14 +6,14 @@ import MessageBoard from './pages/MessageBoard';
 
 function App() {
 
-  const [ messagesData, setMessagesData ] = useState(null);
-  const [ userData, setUserData ] = useState(null);
+  const [messagesData, setMessagesData] = useState(null);
+  const [userData, setUserData] = useState(null);
 
   //const URL = "http://localhost:3000/";
   const URL = "https://testing1293.herokuapp.com/";
 
   async function getMessages(token) {
-    console.log("trying to get messages");
+
     const response = await fetch(URL + 'messages', {
       method: "GET",
       headers: {
@@ -22,12 +22,11 @@ function App() {
       }
     });
     const data = await response.json();
-    console.log("messages: ", data);
     setMessagesData(data);
   }
 
   const handleLogin = async (formData) => {
-    const response = await fetch(URL + 'login',{
+    const response = await fetch(URL + 'login', {
       method: 'POST',
       headers: {
         "Content-type": "application/json",
@@ -35,11 +34,10 @@ function App() {
       body: JSON.stringify(formData)
     });
     const data = await response.json();
-    console.log(data);
-    console.log(data.user.name);
+    setInterval(() => getMessages(data.token), 2000);
     getMessages(data.token);
-    setUserData({name: data.user.name, token: data.token});
-  
+    setUserData({ name: data.user.name, token: data.token });
+
   }
 
   async function createMessage(message) {
@@ -47,21 +45,21 @@ function App() {
     await fetch(URL + 'messages', {
       method: "POST",
       headers: {
-          "Content-Type": "Application/json",
-          "Authorization": "Bearer " + userData.token
+        "Content-Type": "Application/json",
+        "Authorization": "Bearer " + userData.token
       },
       body: JSON.stringify(message),
     });
     getMessages(userData.token);
   };
 
-  async function deleteMessage(messageid){
+  async function deleteMessage(messageid) {
 
     await fetch(URL + 'messages/' + messageid, {
       method: "DELETE",
       headers: {
-          "Content-Type": "Application/json",
-          "Authorization": "Bearer " + userData.token
+        "Content-Type": "Application/json",
+        "Authorization": "Bearer " + userData.token
       },
     });
     getMessages(userData.token);
@@ -79,20 +77,14 @@ function App() {
   const noUser = () => {
     return (
       <div className="App">
-        <Auth handleLogin={handleLogin}/>
+        <Auth handleLogin={handleLogin} />
       </div>
     )
   }
 
-  // useEffect(() => {
-  //   if (!!userData) {
-  //     getMessages();
-  //   }
-  // }, []);
-
   return (
     <>
-      { userData ? ifUser() : noUser() }
+      {userData ? ifUser() : noUser()}
     </>
   )
 

@@ -69,14 +69,55 @@ body {
 
 .message-creator {
     max-height: 30vh;
-    background: yellowgreen;
+    background: #d2d2d2;
+    background: url(https://i.imgur.com/2mE2ADq.png);
     margin: 0 auto 20px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 0px;
     padding: 20px;
+}
+
+.postmessagebutton{
+    display: block;
+    margin: 0 auto;
+    border-top: dotted 1px #12AB4A;
+    border-left: dotted 1px #12AB4A;
+    border-right: dotted 1px #12AB4A;
+    border-bottom: solid 5px #12AB4A;
+    background-color: white;
+    height: 50px;
+    width: 230px;
+    border-radius: 7px;
+    margin-bottom: 13px;
+    padding-left: 10px;
+    font-size: 1.1em;
+    background-color: #3BB04A !important;
+    outline: none;
+    border: 1px solid green;
+    padding: 5px;
+    color: white;
+    transition: 0.18s;
+    font-size: 1.1em !important;
+    margin-top: 10px !important;
+    font-weight: 600;
+    margin:0 auto;
+    transition:0.13s;
+}
+
+.postmessagebutton:hover{
+    width: 260px;
+    opacity:0.89
+}
+
+.messagetextarea{
+    background:white;
+    border-radius:13px;
+    padding:15px;
+    font-size:1.2em;
+    width:400px;
 }
 
 .message-creator>submit {
@@ -100,16 +141,83 @@ nav>a {
 }
 
 .message {
-    border: solid 2px #ACF6CD;
+    border: solid 1px #b3c1b8b5;
     border-radius: 20px;
-    line-height: 0.5em;
+    line-height: 0.3em;
     background: white;
     width: 490px;
-    padding: 10px;
+    padding: 7px;
     padding-left: 20px;
-    color: #005357;
+    color: #002a2c;
     margin-bottom: 15px;
     font-size: 0.9em;
+
+    border-left:solid 3px #b3c1b8b5;
+}
+
+.message > h4{
+    color:#474747;
+    padding-top:0px;
+    margin-top:5px;
+    opacity:0.7;
+}
+
+.message > h4:hover{
+    color:#2d2d2d;
+    opacity:1;
+}
+
+
+.messagetext{
+    margin-top: -10px !important;
+    font-size:1.3em;
+    line-height:30px;
+    padding-top:0px;
+    color:black;
+    display:block;
+    border-top:dotted 1px #D1D1D1;
+}
+
+.crudbutton {
+    max-width: 50px;
+    height: 50px;
+    opacity: 0.8;
+    border: none;
+    zoom: 0.6;
+    border: solid 3px;
+    margin-left: 5px;
+    margin-top: 0px;
+    padding: 4px;
+    padding-right: 6px;
+    border-radius: 7px;
+}
+
+.crudbutton:hover {
+    opacity: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.deleteButton {
+    color: rgb(255, 63, 63);
+    margin-left: 30px;
+    padding-left: 7px;
+}
+
+.deleteButton:hover {
+    opacity: 1;
+    background-color: rgb(255, 63, 63);
+    color: white;
+}
+
+.editButton {
+    border-color: rgb(11, 153, 255);
+    color: rgb(11, 153, 255);
+}
+
+.editButton:hover {
+    background-color: rgb(11, 153, 255);
+    color: white;
 }
 
 .message>h3 {
