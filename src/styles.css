@@ -69,7 +69,7 @@ body {
 
 .message-creator {
     max-height: 30vh;
-    background: yellowgreen;
+    background: #B0F3C8;
     margin: 0 auto 20px auto;
     display: flex;
     flex-direction: column;
@@ -77,6 +77,11 @@ body {
     align-items: center;
     border-radius: 20px;
     padding: 20px;
+}
+
+.postmessagebutton{
+    background-color:yellowgreen;
+    padding:20px;
 }
 
 .message-creator>submit {
@@ -110,6 +115,60 @@ nav>a {
     color: #005357;
     margin-bottom: 15px;
     font-size: 0.9em;
+    display: flex;
+}
+
+.messageLeftSide {
+    flex-grow: 1;
+    min-width: 300px;
+}
+
+.messageRightSide {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.crudbutton {
+    max-width: 50px;
+    height: 50px;
+    opacity: 0.8;
+    border: none;
+    zoom: 0.6;
+    border: solid 3px;
+    margin-left: 5px;
+    margin-top: 0px;
+    padding: 4px;
+    padding-right: 6px;
+    border-radius: 7px;
+}
+
+.crudbutton:hover {
+    opacity: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.deleteButton {
+    color: rgb(255, 63, 63);
+    margin-left: 30px;
+    padding-left: 7px;
+}
+
+.deleteButton:hover {
+    opacity: 1;
+    background-color: rgb(255, 63, 63);
+    color: white;
+}
+
+.editButton {
+    border-color: rgb(11, 153, 255);
+    color: rgb(11, 153, 255);
+}
+
+.editButton:hover {
+    background-color: rgb(11, 153, 255);
+    color: white;
 }
 
 .message>h3 {
