@@ -11,9 +11,9 @@ function App() {
 
   //const URL = "http://localhost:3000/";
   const URL = "https://testing1293.herokuapp.com/";
-
+  
   async function getMessages(token) {
-    console.log("trying to get messages");
+    
     const response = await fetch(URL + 'messages', {
       method: "GET",
       headers: {
@@ -22,7 +22,6 @@ function App() {
       }
     });
     const data = await response.json();
-    console.log("messages: ", data);
     setMessagesData(data);
   }
 
@@ -82,12 +81,6 @@ function App() {
       </div>
     )
   }
-
-  // useEffect(() => {
-  //   if (!!userData) {
-  //     getMessages();
-  //   }
-  // }, []);
 
   return (
     <>
