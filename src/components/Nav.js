@@ -5,9 +5,11 @@ function handleClick(){
 }
 
  return (
-     <nav>
-        <div onClick={handleClick}>Log Out</div>
-        <p>Hello, {props.userData.name}</p>
+     <nav className="logoutbox">
+          <div onClick={handleClick} className="logoutbutton">Log Out</div>
+          <p className="hellogreeting">Hello, {props.userData.name}</p>
+       
+       
      </nav>
  )
 }
