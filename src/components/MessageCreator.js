@@ -20,8 +20,9 @@ function MessageCreator(props) {
                     name="content"
                     onChange={handleChange}
                     value={messageForm.content}
+                    className="messagetextarea"
                 ></textarea>
-                <input type="submit" name="message-form-submit-btn" value="Post Message"></input>
+                <input className="postmessagebutton" type="submit" name="message-form-submit-btn" value="Post Message"></input>
            </form>
         </div>
         
