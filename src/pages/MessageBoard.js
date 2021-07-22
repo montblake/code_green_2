@@ -10,9 +10,9 @@ const MessageBoard = (props) => {
         <Header /> 
         <Nav logOut={props.logOut} userData={props.userData} />
         <div className="messagescontainer">
-        <Messages messagesData={props.messagesData} deleteMessage={props.deleteMessage} userData={props.userData} />
+        <Messages messagesData={props.messagesData} deleteMessage={props.deleteMessage} userData={props.userData} updateMessage={props.updateMessage}/>
         </div>
-        <MessageCreator createMessage={props.createMessage}/>
+        <MessageCreator createMessage={props.createMessage} updateMessage={props.updateMessage}/>
         
       </>
     )
